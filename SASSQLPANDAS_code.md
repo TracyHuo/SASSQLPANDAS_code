@@ -270,7 +270,8 @@ RUN;
 PROC SQL;
     CREATE TABLE mylib.DesenG AS
     SELECT Treatment,avg(Yeaple) AS Yeaple_Mean, max(Schiff) AS Schiff_Max  
-    FROM mylib.Desen;
+    FROM mylib.Desen
+    GROUP BY Treatment;
 QUIT;
 PROC PRINT data=mylib.DesenG ;
 RUN;
@@ -321,7 +322,7 @@ RUN;
 PROC SQL;
     SELECT Gender, Treatment, count(*) AS count
     FROM mylib.Desen
-GROUP BY Gender, Treatment;
+    GROUP BY Gender, Treatment;
 QUIT;
 ```
 &ensp;&ensp;&ensp;&ensp;    
@@ -363,10 +364,10 @@ RUN;
 &ensp;&ensp;&ensp;&ensp;    
 ```
 PROC SQL;
-    SELECT Gender, Treatment, count(*) AS count
+    SELECT DISTINCT Gender, Treatment
     FROM mylib.Desen
-GROUP BY Gender, Treatment; /*日志提示GROUP BY转化为ORDER BY，因为未使用汇总函数*/
-QUIT;  
+    GROUP BY Gender, Treatment; /*日志提示因为没有使用汇总函数，GROUP BY已变为ORDER BY*/
+QUIT;
 /*也可以使用*/
 PROC SQL;
     SELECT DISTINCT CATS(Gender, Treatment) AS combination, Gender, Treatment
@@ -388,7 +389,7 @@ Desen.groupby(by=["Gender","Treatment"]).size()
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;结果：  
 &ensp;&ensp;&ensp;&ensp;    
-![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/PANDAS63.PNG);  
+![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/PANDAS64.PNG);  
 &ensp;&ensp;&ensp;&ensp;   
 &ensp;&ensp;&ensp;&ensp;  
 
