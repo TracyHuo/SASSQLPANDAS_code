@@ -179,13 +179,14 @@ RUN;
 &ensp;&ensp;&ensp;&ensp;  
 * **Python Pandas**：  
 ```
-
+# 注意，条件不能写成20<=Desen["Age"]<=30，会报错：The truth value of a Series is ambiguous.
+# 原因应该是对同一列值的多次比较。所以应该先用20<=Desen["Age"]条件选取，得到数据集后，再用Desen["Age"]<=30条件选取。
 DesenC= Desen.loc[(20<=Desen["Age"])&(Desen["Gender"]=="F"), ("ID", "Name", "Age", "Gender")].loc[Desen["Age"]<=30, :]
 ```  
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;结果：DesenC  
 &ensp;&ensp;&ensp;&ensp;    
-![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/PANDAS3.PNG);  
+![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/PANDAS4.PNG);  
 &ensp;&ensp;&ensp;&ensp;   
 &ensp;&ensp;&ensp;&ensp;   
 # 五  排序   
