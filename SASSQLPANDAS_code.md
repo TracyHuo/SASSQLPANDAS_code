@@ -179,7 +179,8 @@ RUN;
 &ensp;&ensp;&ensp;&ensp;  
 * **Python Pandas**：  
 ```
-DesenC= Desen.loc[(20<=Desen["Age"]<=30)&(Desen["Gender"]=="F"), ("ID", "Name", "Age", "Gender")]
+
+DesenC= Desen.loc[(20<=Desen["Age"])&(Desen["Gender"]=="F"), ("ID", "Name", "Age", "Gender")].loc[Desen["Age"]<=30, :]
 ```  
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;结果：DesenC  
