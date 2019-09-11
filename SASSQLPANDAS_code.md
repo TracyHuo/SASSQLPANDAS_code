@@ -13,7 +13,7 @@
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;原始excel示例数据如下：originT.xlsx    
 &ensp;&ensp;&ensp;&ensp;  
-![image](https://github.com/TracyHuo/GIBIPIProcess/blob/master/Image/originT.PNG);  
+![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/originT.PNG);  
 &ensp;&ensp;&ensp;&ensp;   
 &ensp;&ensp;&ensp;&ensp;  
 * **SAS**：  
@@ -30,7 +30,7 @@
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;结果：mylib.originT数据集  
 &ensp;&ensp;&ensp;&ensp;    
-![image](https://github.com/TracyHuo/GIBIPIProcess/blob/master/Image/SASoriginT.PNG);  
+![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/SASoriginT.PNG);  
 &ensp;&ensp;&ensp;&ensp;   
 &ensp;&ensp;&ensp;&ensp;  
 * **Python Pandas**：  
@@ -40,7 +40,7 @@ df = pd.read_excel(r"F:\Clinical trials\SASSQLPANDAS\originT.xlsx",sheet_name="S
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;结果：df数据集  
 &ensp;&ensp;&ensp;&ensp;    
-![image](https://github.com/TracyHuo/GIBIPIProcess/blob/master/Image/PANDASoriginT.PNG);  
+![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/PANDASoriginT.PNG);  
 &ensp;&ensp;&ensp;&ensp;   
 &ensp;&ensp;&ensp;&ensp;  
 # 二  修改列名   
