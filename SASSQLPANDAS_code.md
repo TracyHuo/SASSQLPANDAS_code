@@ -384,7 +384,8 @@ QUIT;
 ```
 Desen.groupby(by=["Gender","Treatment"]).first()  
 # 或者
-Desen.groupby(by=["Gender","Treatment"]).size()  
+DesenD = Desen.set_index(["Gender","Treatment"]).sort_index()
+DesenD.index  #然后查看DesenD的索引信息
 ```  
 &ensp;&ensp;&ensp;&ensp;    
 &ensp;&ensp;&ensp;&ensp;结果：  
