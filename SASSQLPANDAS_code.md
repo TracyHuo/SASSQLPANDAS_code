@@ -451,4 +451,3 @@ DesenS = DesenG.loc[DesenG["Yeaple"]>30,:]
 &ensp;&ensp;&ensp;&ensp;    
 ![image](https://github.com/TracyHuo/SASSQLPANDAS_code/blob/master/Image/PANDAS7.PNG);  
 &ensp;&ensp;&ensp;&ensp;   
-&ensp;&ensp;&ensp;&ensp;   
